@@ -1,7 +1,6 @@
- body{
-  padding-top: 25px;/*baja el dashdorad para que no lo tape el header*/
+body {
+  padding-top: 25px; /* Baja el dashboard para que no lo tape el header */
 }
-
 
 .circle {
   width: 50vw; /* Tamaño relativo al ancho de la pantalla */
@@ -37,7 +36,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 1,2rem; /* Tamaño relativo */
+  font-size: 1.2rem; /* Corrige el error de la coma */
   font-weight: bold;
   color: #333;
 }
@@ -47,10 +46,11 @@
   top: 55%;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 2rem; /* Tamaño relativo */
+  font-size: 2rem;
   color: #333;
 }
-p{
+
+p {
   font-weight: 900;
 }
 
@@ -83,14 +83,14 @@ p{
   color: #8B4513;
 }
 
+/* Estilos para la leyenda */
 .legend {
   display: flex;
-  flex-wrap: wrap; /* Permite que los elementos se ajusten en múltiples líneas si es necesario */
-  justify-content:center;
-  gap: 0px; /* Añade espacio entre los elementos de la leyenda */
-  margin: 0 auto; /* Centra la leyenda */
+  flex-wrap: wrap; /* Evita que los elementos se salgan */
+  justify-content: center;
+  width: 100%; /* Ajusta el ancho */
   max-width: 75%;
-  width: 500%; /* Asegura que ocupe todo el ancho disponible */
+  margin: 0 auto;
 }
 
 .legend .d-flex {
@@ -100,21 +100,22 @@ p{
 /* Media Query para Pantallas Pequeñas */
 @media (max-width: 576px) {
   .circle {
-    width: 70vw; /* Más pequeño para dispositivos pequeños */
-    height: 70vw;
+    width: min(70vw, 150px); /* Limita el tamaño en móviles */
+    height: min(70vw, 150px);
   }
 
   .center-text {
     font-size: 1rem; /* Reducir tamaño de texto */
+    text-align: center;
   }
 
   .total-tasks {
-    font-size: 0.7rem; /* Reducir tamaño de texto */
+    font-size: 0.8rem; /* Mejor legibilidad en móviles */
   }
 
   .legend {
     width: 100%; /* La leyenda ocupa el 100% del ancho en dispositivos pequeños */
-    text-align: center; /* Centrar los elementos en dispositivos pequeños */
+    text-align: center;
   }
 
   .dot {
